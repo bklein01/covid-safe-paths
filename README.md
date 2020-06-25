@@ -147,9 +147,9 @@ sh setup_env.sh
 #### Android (Windows, Linux, macOS)
 
 ```
-yarn run-android-gps ## for the location enabled app
+npm run run-android-gps ## for the location enabled app
 
-yarn run-android-bt ## for the bluetooth enabled app
+npm run run-android-bt ## for the bluetooth enabled app
 ```
 
 Device storage can be cleared by long-pressing on the app icon in the simulator, clicking "App info", then "Storage", and lastly, "Clear Storage".
@@ -159,15 +159,15 @@ Device storage can be cleared by long-pressing on the app icon in the simulator,
 First, install the pod files:
 
 ```
-yarn install:pod ## only needs to be ran once
+npm run install:pod ## only needs to be ran once
 ```
 
 Then, run the application:
 
 ```
-yarn run-ios-gps ## for the location enabled app
+npm run run-ios-gps ## for the location enabled app
 
-yarn run-ios-bt ## for the bluetooth enabled app
+npm run run-ios-bt ## for the bluetooth enabled app
 ```
 
 Device storage can be cleared by clicking "Hardware" on the system toolbar, and then "Erase all content and settings".
@@ -194,7 +194,7 @@ This project is using
 
 Run the complier with:
 ```
-yarn tsc
+npm run tsc
 ```
 
 Not every file *needs* to be written in TypeScript, but we are preferring to use
@@ -235,7 +235,7 @@ Tests are ran automatically through Github actions - PRs are not able to be merg
 To run the static analysis tools:
 
 ```
-yarn validate
+npm run validate
 ```
 
 ### Unit Test
@@ -243,13 +243,13 @@ yarn validate
 To run the unit tests:
 
 ```
-yarn test --watch
+npm test --watch
 ```
 
 [Snapshot testing](https://jestjs.io/docs/en/snapshot-testing) is used as a quick way to verify that the UI has not changed. To update the snapshots:
 
 ```
-yarn update-snapshots
+npm run update-snapshots
 ```
 
 ### e2e Test
@@ -261,9 +261,9 @@ e2e tests are written using [_detox_](https://github.com/wix/Detox). Screenshots
 To run the e2e tests:
 
 ```
-yarn detox-setup ## only needs to be run once
-yarn build:e2e:ios ## needs to be run after any code change
-yarn test:e2e:iphone{11, -se, 8}
+npm run detox-setup ## only needs to be run once
+npm run build:e2e:ios ## needs to be run after any code change
+npm run test:e2e:iphone{11, -se, 8}
 ```
 
 ### Manual Device Testing
